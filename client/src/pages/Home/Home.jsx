@@ -1,12 +1,19 @@
-import React from 'react'
-import './Home.scss'
+import React from "react";
+import "./Home.scss";
+import Frontpage from "../../components/Frontpage/Frontpage";
+import Introduction from "../../components/Introduction/Introduction";
+import Courses from "../Courses/Courses";
+import Auth from "../Auth/Auth";
 
 const Home = () => {
   return (
-    <>
-    <div>Home</div>
-    </>
-  )
-}
+    <div className="Home">
+      {/* <Auth/> */}
+      <Frontpage />
+      <Introduction />
+      <Courses />
+    </div>
+  );
+};
 
-export default Home
+export default Home;

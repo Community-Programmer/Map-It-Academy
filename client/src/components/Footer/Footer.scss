@@ -1,0 +1,39 @@
+.Footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  gap: 1rem;
+  background: var(--footer);
+  padding: 2rem 10rem;
+  color: var(--hrColor);
+}
+
+.Footer div span {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.Footer ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.Footer ul li {
+  margin: 1rem 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.C-Footer {
+  position: relative;
+  gap: 1rem;
+  background: var(--footer);
+  text-align: center;
+  color: var(--hrColor);
+}
+
+.C-Footer > hr {
+  border-bottom: 1px solid #888;
+  margin: 0;
+}
