@@ -5,6 +5,8 @@ import Layout from "./Layout/Layout";
 import About from "./pages/About/About";
 import Courses from "./pages/Courses/Courses";
 import Programs from "./pages/Programs/Programs";
+import Login from "./pages/Auth/Login/Login";
+import Signup from "./pages/Auth/SignUp/Signup";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/programs" element={<Programs />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Route>
       </Routes>
     </div>

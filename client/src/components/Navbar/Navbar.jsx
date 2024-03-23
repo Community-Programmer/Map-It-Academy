@@ -1,21 +1,25 @@
 import React from "react";
 import "./Navbar.scss";
 import logo from "../../assets/logo.png";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="navbar">
-      <img src={logo} alt="" className="logo" />
+      <NavLink to='/'><img src={logo} alt="" className="logo" /></NavLink>
       <ul>
-        <li>Home</li>
+        <NavLink to='/'><li>Home</li></NavLink>
         <li>
           <div class="dropdown">
             Courses
             <div class="dropdown-content">
-              <a href="#">AWS</a>
-              <a href="#">Snowflake</a>
-              <a href="#">IICS</a>
-              <a href="#">DBT</a>
+              <NavLink href="#">AWS</NavLink>
+              <NavLink href="#">Snowflake</NavLink>
+              <NavLink href="#">IICS</NavLink>
+              <NavLink href="#">DBT</NavLink>
             </div>
           </div>
         </li>
@@ -23,14 +27,15 @@ const Navbar = () => {
           <div class="dropdown">
             Programs
             <div class="dropdown-content">
-              <a href="#">Cloud Data Warehouse</a>
-              <a href="#">Data Integration</a>
-              <a href="#">Data Migration</a>
+              <NavLink href="#">Cloud Data Warehouse</NavLink>
+              <NavLink href="#">Data Integration</NavLink>
+              <NavLink href="#">Data Migration</NavLink>
             </div>
           </div>
         </li>
       </ul>
-      <button className="button nv-button">Login</button>
+      <button onClick={()=>navigate('/login')} className="button nv-button">Login</button>
+      <button onClick={()=>navigate('/signup')} className="button nv-button">Sign up</button>
     </div>
   );
 };
