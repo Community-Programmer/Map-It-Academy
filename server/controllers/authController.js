@@ -60,7 +60,7 @@ export const login = async(req, res) => {
 
         res.cookie('token', token, { httpOnly: true, maxAge: 30 * 24 * 60 * 60 * 1000 }); 
 
-        res.status(200).json({ message: 'Login successful.', username: user.username });
+        res.status(200).json({ message: 'Login successful.', username: user.username, userId: user._id });
 
     } catch (error) {
         console.error('Error logging in:', error);

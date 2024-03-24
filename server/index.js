@@ -15,6 +15,7 @@ const corsOptions = {
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors(corsOptions));
+app.use('/auth',authRoute);
 app.use('/user',authRoute);
 
 connectDb();
