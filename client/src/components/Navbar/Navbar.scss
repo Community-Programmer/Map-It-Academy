@@ -14,13 +14,17 @@
 
 .navbar ul {
   flex: 1;
+  display: flex;
   list-style: none;
-  text-align: right;
+  gap: 3rem;
+}
+
+.navbar ul a{
+  text-decoration: none;
+  color:  var(--black);;
 }
 
 .navbar ul li {
-  display: inline-block;
-  margin: 1rem 3rem;
   font-size: 20px;
   cursor: pointer;
 }
