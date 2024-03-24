@@ -33,7 +33,7 @@ export default authSlice.reducer;
 
 export const loginUser = createAsyncThunk('auth/login', async (loginData) => {
 
-    const response = await axios.post(`${API_BASE_URL}/user/login`, loginData, {
+    const response = await axios.post(`${API_BASE_URL}/auth/login`, loginData, {
         withCredentials: true
     });
     return response.data;
@@ -42,14 +42,14 @@ export const loginUser = createAsyncThunk('auth/login', async (loginData) => {
 
 export const signupUser = createAsyncThunk('auth/signUp', async (signupData) => {
 
-    const response = await axios.post(`${API_BASE_URL}/user/signup`, signupData);
+    const response = await axios.post(`${API_BASE_URL}/auth/signup`, signupData);
     return response.data;
 })
 
 
 export const logoutUser = createAsyncThunk('auth/logout', async ()=>{
 
-    const response = await axios.get(`${API_BASE_URL}/user/logout`,{
+    const response = await axios.get(`${API_BASE_URL}/auth/logout`,{
         withCredentials: true
     });
 
