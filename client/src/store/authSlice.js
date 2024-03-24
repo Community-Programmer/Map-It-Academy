@@ -7,7 +7,9 @@ const authSlice = createSlice({
     name: 'authData',
     initialState: {
         username: 'Guest',
-        isLogin: false
+        userId: '-',
+        isLogin: false,
+        error: null
     },
 
     extraReducers: builder =>{
@@ -15,6 +17,7 @@ const authSlice = createSlice({
         .addCase(loginUser.fulfilled, (state, action) => {
             state.isLogin = true;
             state.username = action.payload.username;
+            state.userId = action.payload.userId;
         })
         .addCase(logoutUser.fulfilled, (state, action) => {
             state.isLogin = false;

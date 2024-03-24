@@ -1,0 +1,15 @@
+.profile-section{
+    position: relative;
+    background-color: white;
+
+    h1,h2{
+        text-align: center;
+    }
+
+    .user__info__section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid black;
+    }
+}

@@ -7,6 +7,13 @@ import Courses from "./pages/Courses/Courses";
 import Programs from "./pages/Programs/Programs";
 import Login from "./pages/Auth/Login/Login";
 import Signup from "./pages/Auth/SignUp/Signup";
+import Profile from "./pages/Profile/Profile";
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 
 function App() {
   return (
@@ -19,6 +26,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/programs" element={<Programs />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Route>

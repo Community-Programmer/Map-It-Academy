@@ -79,7 +79,7 @@ const Navbar = () => {
           <div class="dropdown">
            {auth.username}
             <div class="dropdown-content">
-              <NavLink href="#"><FaRegUser/> My profile</NavLink>
+              <NavLink to="/profile"><FaRegUser/> My profile</NavLink>
               <NavLink onClick={handleLogout}><MdLogout/> Logout</NavLink>
             </div>
           </div>
